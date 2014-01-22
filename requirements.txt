@@ -40,3 +40,4 @@ django-rosetta>=0.7.1
 django-celery>=3.0.17
 -e git://github.com/tzulberti/django-datefilterspec.git#egg=django-daterange-filter
 django-toolbelt
+django-storages>=1.1.8
