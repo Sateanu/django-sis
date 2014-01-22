@@ -15,8 +15,9 @@ SFTP_STORAGE_ROOT = '/var/www/heroku_storage/'
 SFTP_STORAGE_PARAMS = {
     'username': 'OMG NO WAY!',
     'password': 'SERIOUSLY!',
+    'look_for_keys': False,
 }
-MEDIA_URL = 'http://daphne.cristoreyny.org:12345/heroku_storage/media/'
+MEDIA_URL = 'http://daphne.cristoreyny.org:12345/heroku_storage/'
 
 import dj_database_url
 DATABASES = {}
