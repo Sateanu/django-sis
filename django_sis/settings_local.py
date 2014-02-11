@@ -20,4 +20,4 @@ MEDIA_URL = 'http://daphne.cristoreyny.org:12345/heroku_storage/'
 
 import dj_database_url
 DATABASES = {}
-DATABASES['default'] = dj_database_url.config()
+DATABASES['default'] = dj_database_url.config(default='postgres:///local_maroon')
