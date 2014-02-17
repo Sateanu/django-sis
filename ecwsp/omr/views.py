@@ -320,6 +320,7 @@ def ajax_new_question_form(request, test_id):
 @permission_required('omr.teacher_test')
 def ajax_benchmarks_form(request, test_id, question_id):
     question = get_object_or_404(Question, pk=question_id)
+    print 'HEY', question.order
     if request.POST:
         form = QuestionBenchmarkForm(request.POST, prefix="qid{}".format(question_id), instance=question)
         if form.is_valid():
@@ -327,6 +328,7 @@ def ajax_benchmarks_form(request, test_id, question_id):
             form = None
     else:
         form = QuestionBenchmarkForm(prefix="qid{}".format(question_id), instance=question)
+    print 'YEH', question.order, Question.objects.get(id=question_id).order
     return render_to_response('omr/one_test_question_benchmark.html', {
         'question': question,
         'form': form,
